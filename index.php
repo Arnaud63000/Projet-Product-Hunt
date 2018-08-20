@@ -31,43 +31,46 @@
                         <div class="populaire">
                             <div class="header">TOP 3 des produits les plus populaires ce mois-ci</div>
                             <hr class="separateur2">
-                            
-                                <div class="images">
+                                 <div class="images">
                                     <img src="images/youtube.png" id="img-yt" alt="images-youtube">
-                                    
-                                </div>
+                                 </div>
                                     <div class="titre">
                                         <h2>Youtube</h2>
                                     </div>
                                         <div class="text">
-                                        <h3>La meilleure plateforme de partages de vidéos!</h3>
+                                            <h3>La meilleure plateforme de partages de vidéos!</h3>
+                                            <button type="button" class="btn btn-dark" id="btn-ctg">&#x25A4;Video</button>
+                                            <button type="button" class="btn btn-dark" id="btn-vote">&#x25B2;UpVote</button>
+                                            <button type="button" class="btn btn-dark" id="btn-vote"><img src="images/commentaire.png" id="commentaire"></button>
                                         </div>
                                               <hr class="separateur">
                                               
                                         <div class="images2">
-                                    <img src="images/facebook.png" id="img-fb" alt="images-facebook">
-                                    
-                                </div>
+                                            <img src="images/facebook.png" id="img-fb" alt="images-facebook">
+                                        </div>
                                     <div class="titre2">
                                         <h2>Facebook</h2>
                                     </div>
                                         <div class="text2">
-                                        <h3>La meilleure réseaux sociaux!</h3>
+                                            <h3>Le meilleur réseaux social!</h3>
+                                            <button type="button" class="btn btn-dark" id="btn-ctg">&#x25A4;Techno</button>
+                                            <button type="button" class="btn btn-dark" id="btn-vote">&#x25B2; UpVote</button>
+                                            <button type="button" class="btn btn-dark" id="btn-vote"><img src="images/commentaire.png" id="commentaire"></button>
                                         </div>
                                         <hr class="separateur">
 
                                      <div class="images3">
-                                    <img src="images/deezer.png" id="img-dz" alt="images-deezer">
-                                    
-                                </div>
-                                    <div class="titre3">
-                                        <h2>Deezer</h2>
+                                        <img src="images/deezer.png" id="img-dz" alt="images-deezer">
                                     </div>
-                                        <div class="text3">
-                                        <h3>La meilleure plateforme de musiques!</h3>
+                                        <div class="titre3">
+                                            <h2>Deezer</h2>
                                         </div>
-                                        <hr class="separateur">
-
+                                        <div class="text3">
+                                            <h3>La meilleure plateforme de musiques!</h3>
+                                            <button type="button" class="btn btn-dark" id="btn-ctg">&#x25A4;Music</button>
+                                            <button type="button" class="btn btn-dark" id="btn-vote">&#x25B2; UpVote</button>
+                                            <button type="button" class="btn btn-dark" id="btn-vote"><img src="images/commentaire.png" id="commentaire"></button>
+                                        </div>
                                     </div>                    
             </div>
         </div>  

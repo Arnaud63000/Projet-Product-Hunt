@@ -52,7 +52,7 @@ body, html
     margin-left: 200px;
     max-width: 600px;
     background-color: white;
-    border: 1px solid #e8e8e8;;
+    border: 1px solid #e8e8e8;
 }
 .header
 {
@@ -148,4 +148,29 @@ h1 {
 {
     position: relative;
     bottom: 10px;
+}
+#btn-vote
+{
+    position: relative;
+    left: 280px;
+    width: auto;
+    height: 24px;
+    background-color: white;
+    color: black;
+    border: 1px solid #e8e8e8;
+    font-size: 0.8em;
+}
+#commentaire
+{
+    width: 18px;
+}
+
+#btn-ctg{
+    position: relative;
+    left: 5px;
+    height: 24px;
+    background-color: white;
+    color: black;
+    border: 1px solid #e8e8e8;
+    font-size: 0.8em;
 }
