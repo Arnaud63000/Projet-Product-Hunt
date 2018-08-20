@@ -1,0 +1,151 @@
+body, html
+{
+    overflow-x: hidden;
+}
+
+.jumbotron {
+    background-color: white;
+    color: #FF8300;
+    
+}
+.btn
+{
+    background-color: #FF8300;
+    border-color: #FF8300;
+}
+.left
+{
+    background-color: #FF8300;
+}
+.menu {
+    margin-top: 50px;
+    height: 850px;
+}
+#Btn-accueil{
+    margin-top:10px;
+}
+#Btn-Techno{
+    margin-top:10px;
+}
+
+#Btn-Musiques{
+    margin-top:10px;
+}
+
+#Btn-Jeux-Videos{
+    margin-top:10px;    
+}
+
+#Btn-Videos{
+    margin-top:10px;
+}
+#Btn-Photos{
+    margin-top:10px;    
+}
+.menu button:hover
+{
+    background-color: #00C4CC;
+}
+
+.populaire
+{
+    margin-left: 200px;
+    max-width: 600px;
+    background-color: white;
+    border: 1px solid #e8e8e8;;
+}
+.header
+{
+    font-size: 1.3em;
+    text-align: center;
+}
+
+
+#img-yt
+{
+   
+    width: 80px;
+}
+
+#img-fb
+{
+   
+    width: 80px;
+}
+
+#img-dz
+{
+   
+    width: 80px;
+}
+
+.titre
+{
+    
+    width: 150px;
+    position: relative;
+    bottom: 100px;
+    left: 100px;
+}
+.text
+{
+    position: relative;  
+    bottom: 100px;
+    left: 100px;
+    width: 500px;
+}
+.text h3
+{
+    font-size: 1em;
+}
+
+h1 {
+    text-align: center;
+}
+.separateur
+{
+    position: relative;
+    bottom: 50px;
+}
+.titre2
+{
+    width: 150px;
+    position: relative;
+    bottom: 100px;
+    left: 100px;
+}
+.text2
+{
+    position: relative;  
+    bottom: 100px;
+    left: 100px;
+    width: 500px;
+}
+.text2 h3
+{
+    font-size: 1em;
+}
+
+.titre3
+{
+    width: 150px;
+    position: relative;
+    bottom: 100px;
+    left: 100px;
+}
+.text3
+{
+    position: relative;  
+    bottom: 100px;
+    left: 100px;
+    width: 500px;
+}
+.text3 h3
+{
+    font-size: 1em;
+}
+.separateur2
+{
+    position: relative;
+    bottom: 10px;
+}
