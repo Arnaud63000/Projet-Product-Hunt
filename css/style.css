@@ -2,8 +2,15 @@ body, html
 {
     overflow-x: hidden;
 }
-
+#logo
+{
+    width: 100px;
+    position: relative;
+    left: 450px;
+}
 .jumbotron {
+    position: relative;
+    bottom: 60px;
     background-color: white;
     color: #FF8300;
     
@@ -42,7 +49,7 @@ body, html
 #Btn-Photos{
     margin-top:10px;    
 }
-.menu button:hover
+.menu a:hover
 {
     background-color: #00C4CC;
 }
@@ -63,29 +70,29 @@ body, html
 
 #img-yt
 {
-   
     width: 80px;
 }
 
 #img-fb
-{
-   
+{  
     width: 80px;
 }
 
 #img-dz
 {
-   
     width: 80px;
 }
 
 .titre
 {
-    
     width: 150px;
     position: relative;
     bottom: 100px;
     left: 100px;
+}
+.titre h2
+{
+    margin-top: 15px;
 }
 .text
 {
@@ -111,7 +118,7 @@ h1 {
 {
     width: 150px;
     position: relative;
-    bottom: 100px;
+    bottom: 90px;
     left: 100px;
 }
 .text2
@@ -130,7 +137,7 @@ h1 {
 {
     width: 150px;
     position: relative;
-    bottom: 100px;
+    bottom: 90px;
     left: 100px;
 }
 .text3
@@ -164,7 +171,6 @@ h1 {
 {
     width: 18px;
 }
-
 #btn-ctg{
     position: relative;
     left: 5px;
