@@ -17,7 +17,8 @@
          <?php 
             include 'includes/menu.php';
          ?>
-         <div class="jumbotron col-10">
+        <div class="container">
+         <div class="jumbotron col-10 col-lg-11 col-md-10 col-sm-10">
                 <img src="images/logo.png" id="logo">
                 <h1 class="display-4">Hunter-Prod</h1>
                 <p class="lead"></p>
@@ -68,6 +69,7 @@
                                         </div>
                                     </div>      
          </div>
+     </div>
 </div>
 </body>
 </head>
