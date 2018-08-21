@@ -221,6 +221,10 @@ h1 {
 {
     margin-left: 70px;
 }
+.modal-body img
+{
+    width: 800px;
+}
 #btn-com
 {
     position: relative;

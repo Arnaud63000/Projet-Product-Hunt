@@ -100,28 +100,33 @@
 
 
                 <div class="modal fade" id="jeuxvideomodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content" class="modal">
-                            <div class="modal-header">
-                                <img src="images/jeuxvideopointcom.png" class="logo">
-                                <a href="http://www.jeuxvideo.com" target="blank">
-                                    <h5 class="modal-title" id="exampleModalLabel">JEUXVIDEO.COM</h5>
-                                </a>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <img src="images/jvc-screen.PNG">
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-dark" id="modal-vote">&#x25B2;UpVote</button>
-                                <button type="button" class="btn btn-dark" id="btn-com"><img src="images/commentaire.png" id="commentaire"></button>
-                                <button type="button" class="btn btn-secondary" id="quit-btn" data-dismiss="modal">Quitter</button>
-                            </div>
-                        </div>
-                    </div>
+                
+                <div class="modal-dialog" role="document">
+            <div class="modal-content" id="modal">
+                <div class="modal-header">
+                    <img src="images/jeuxvideopointcom.png" id="logo">
+                    <a href="http://www.jeuxvideo.com" target="blank">
+                        <h5 class="modal-title" id="exampleModalLabel">JEUXVIDEO.COM</h5>
+                    </a>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
+                <div class="modal-body">
+                    <img src="images/jvc-screen.PNG">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" id="modal-vote">&#x25B2;UpVote</button>
+                    <button type="button" class="btn btn-dark" id="btn-com"><img src="images/commentaire.png" id="commentaire"></button>
+                    <button type="button" class="btn btn-secondary" id="quit-btn" data-dismiss="modal">Quitter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
 
                 <!-- End Modal -->
                 <!-- Modal G2A-->
@@ -129,27 +134,27 @@
 
                 <div class="modal fade" id="g2amodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
-                        <div class="modal-content" class="modal">
-                            <div class="modal-header">
-                                <img src="images/logoG2A.png" class="logo">
-                                <a href="http://www.g2a.com" target="blank">
-                                    <h5 class="modal-title" id="exampleModalLabel">G2A</h5>
-                                </a>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <img src="images/g2a-screen.PNG">
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-dark" id="modal-vote">&#x25B2;UpVote</button>
-                                <button type="button" class="btn btn-dark" id="btn-com"><img src="images/commentaire.png" id="commentaire"></button>
-                                <button type="button" class="btn btn-secondary" id="quit-btn" data-dismiss="modal">Quitter</button>
-                            </div>
-                        </div>
-                    </div>
+            <div class="modal-content" id="modal">
+                <div class="modal-header">
+                    <img src="images/logoG2A.png" id="logo">
+                    <a href="http://www.g2a.com" target="blank">
+                        <h5 class="modal-title" id="exampleModalLabel">G2A</h5>
+                    </a>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
+                <div class="modal-body">
+                    <img src="images/g2a-screen.PNG">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" id="modal-vote">&#x25B2;UpVote</button>
+                    <button type="button" class="btn btn-dark" id="btn-com"><img src="images/commentaire.png" id="commentaire"></button>
+                    <button type="button" class="btn btn-secondary" id="quit-btn" data-dismiss="modal">Quitter</button>
+                </div>
+            </div>
+        </div>
+    </div>
                 <!-- End Modal -->
 
                 <!-- Modal DEEZER-->
@@ -157,28 +162,27 @@
 
                 <div class="modal fade" id="instantgamingmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
-                        <div class="modal-content" class="modal">
-                            <div class="modal-header">
-                                <img src="images/instantgaming.png" class="logo">
-                                <a href="http://www.instant-gaming.com" target="blank">
-                                    <h5 class="modal-title" id="exampleModalLabel">Instant Gaming</h5>
-                                </a>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <img src="images/instant-gaming-screen.PNG">
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-dark" id="modal-vote">&#x25B2;UpVote</button>
-                                <button type="button" class="btn btn-dark" id="btn-com"><img src="images/commentaire.png" id="commentaire"></button>
-                                <button type="button" class="btn btn-secondary" id="quit-btn" data-dismiss="modal">Quitter</button>
-                            </div>
-                        </div>
-                    </div>
+            <div class="modal-content" id="modal">
+                <div class="modal-header">
+                    <img src="images/instantgaming.png" id="logo">
+                    <a href="http://www.instant-gaming.com" target="blank">
+                        <h5 class="modal-title" id="exampleModalLabel">Instant Gaming</h5>
+                    </a>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-
+                <div class="modal-body">
+                    <img src="images/instant-gaming-screen.PNG">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" id="modal-vote">&#x25B2;UpVote</button>
+                    <button type="button" class="btn btn-dark" id="btn-com"><img src="images/commentaire.png" id="commentaire"></button>
+                    <button type="button" class="btn btn-secondary" id="quit-btn" data-dismiss="modal">Quitter</button>
+                </div>
+            </div>
+        </div>
+    </div>
                 <!-- End Modal -->
 
 </body>
