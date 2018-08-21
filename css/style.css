@@ -178,8 +178,12 @@ h1 {
 }
 #modal-vote
 {   
-    margin-right: 800px;
-    width: 100Px;
+    position: relative;
+    right: 700px;
+    height: 40px;
+    width: 100px;
+    margin: 0;
+    padding: 0;
 }
 
 #modal-vote:hover
@@ -216,4 +220,13 @@ h1 {
 .modal-body
 {
     margin-left: 70px;
+}
+#btn-com
+{
+    position: relative;
+    right: 700px;
+}
+#btn-com:hover
+{
+    background-color: #00C4CC;
 }

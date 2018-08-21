@@ -99,6 +99,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-dark" id="modal-vote">&#x25B2;UpVote</button>
+                    <button type="button" class="btn btn-dark" id="btn-com"><img src="images/commentaire.png" id="commentaire"></button>
                     <button type="button" class="btn btn-secondary" id="quit-btn" data-dismiss="modal">Quitter</button>
                 </div>
             </div>
@@ -123,10 +124,11 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <img src="images/Picsart.PNG">
+                    <img src="images/picsart_screen.PNG">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-dark" id="modal-vote">&#x25B2;UpVote</button>
+                    <button type="button" class="btn btn-dark" id="btn-com"><img src="images/commentaire.png" id="commentaire"></button>
                     <button type="button" class="btn btn-secondary" id="quit-btn" data-dismiss="modal">Quitter</button>
                 </div>
             </div>
@@ -155,6 +157,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-dark" id="modal-vote">&#x25B2;UpVote</button>
+                    <button type="button" class="btn btn-dark" id="btn-com"><img src="images/commentaire.png" id="commentaire"></button>
                     <button type="button" class="btn btn-secondary" id="quit-btn" data-dismiss="modal">Quitter</button>
                 </div>
             </div>
