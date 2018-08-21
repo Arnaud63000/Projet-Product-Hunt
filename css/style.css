@@ -234,3 +234,14 @@ h1 {
 {
     background-color: #00C4CC;
 }
+.btn-com
+{
+    position: relative;
+    left: 100px;
+}
+.btn-com hr
+{
+    position: relative;
+    right: 150px;
+    margin-top: 10px;
+}

@@ -9,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Projet Product-Hunt</title>
 </head>
@@ -92,6 +93,34 @@
     </div>
 
 
+
+<script>
+/* <![CDATA[ */ 
+/*
+|-----------------------------------------------------------------------
+|  jQuery Toggle Script by Matt - skyminds.net
+|-----------------------------------------------------------------------
+|
+| Affiche/cache le contenu d'un bloc une fois qu'un lien est cliqué.
+|
+*/
+
+// On attend que la page soit chargée 
+jQuery(document).ready(function()
+{
+   // On cache la zone de texte
+   jQuery('#btn-com').hide();
+   // toggle() lorsque le lien avec l'ID #toggler est cliqué
+   jQuery('button#btn-com').click(function()
+  {
+      jQuery('#btn-com').toggle(400);
+      return false;
+   });
+});
+/* ]]> */ 
+</script>
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -101,7 +130,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
     <!-- Modal YOUTUBE-->
-
 
     <div class="modal fade" id="youtubemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -117,6 +145,10 @@
                 </div>
                 <div class="modal-body">
                     <img src="images/Youtube-modal.PNG">
+                    <div id="btn-com" class="btn-com">
+                        <hr class="separateur">
+                        Ce texte apparaît grâce à un script javascript
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-dark" id="modal-vote">&#x25B2;UpVote</button>
