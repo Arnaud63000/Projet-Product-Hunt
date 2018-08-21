@@ -225,6 +225,9 @@ h1 {
 {
     width: 800px;
 }
+
+/* Bouton message pour afficher/cacher */
+
 #btn-com
 {
     position: relative;
@@ -234,6 +237,28 @@ h1 {
 {
     background-color: #00C4CC;
 }
+#btn-com1
+{
+    position: relative;
+    right: 700px;
+}
+#btn-com1:hover
+{
+    background-color: #00C4CC;
+}
+#btn-com2
+{
+    position: relative;
+    right: 700px;
+}
+#btn-com2:hover
+{
+    background-color: #00C4CC;
+}
+
+/* End boutton message afficher/cacher */
+
+
 .btn-com
 {
     position: relative;
@@ -244,4 +269,9 @@ h1 {
     position: relative;
     right: 150px;
     margin-top: 10px;
+}
+.form-com
+{
+    position: relative;
+    left: 550px;
 }

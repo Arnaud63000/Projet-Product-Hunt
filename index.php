@@ -110,15 +110,75 @@ jQuery(document).ready(function()
 {
    // On cache la zone de texte
    jQuery('#btn-com').hide();
+   
    // toggle() lorsque le lien avec l'ID #toggler est cliqué
    jQuery('button#btn-com').click(function()
+    
   {
       jQuery('#btn-com').toggle(400);
+      
       return false;
    });
 });
 /* ]]> */ 
 </script>
+<script>
+/* <![CDATA[ */ 
+/*
+|-----------------------------------------------------------------------
+|  jQuery Toggle Script by Matt - skyminds.net
+|-----------------------------------------------------------------------
+|
+| Affiche/cache le contenu d'un bloc une fois qu'un lien est cliqué.
+|
+*/
+
+// On attend que la page soit chargée 
+jQuery(document).ready(function()
+{
+   // On cache la zone de texte
+   jQuery('#btn-com1').hide();
+   
+   // toggle() lorsque le lien avec l'ID #toggler est cliqué
+   jQuery('button#btn-com1').click(function()
+    
+  {
+      jQuery('#btn-com1').toggle(400);
+      
+      return false;
+   });
+});
+/* ]]> */ 
+</script>
+<script>
+/* <![CDATA[ */ 
+/*
+|-----------------------------------------------------------------------
+|  jQuery Toggle Script by Matt - skyminds.net
+|-----------------------------------------------------------------------
+|
+| Affiche/cache le contenu d'un bloc une fois qu'un lien est cliqué.
+|
+*/
+
+// On attend que la page soit chargée 
+jQuery(document).ready(function()
+{
+   // On cache la zone de texte
+   jQuery('#btn-com2').hide();
+   
+   // toggle() lorsque le lien avec l'ID #toggler est cliqué
+   jQuery('button#btn-com2').click(function()
+    
+  {
+      jQuery('#btn-com2').toggle(400);
+      
+      return false;
+   });
+});
+/* ]]> */ 
+</script>
+
 
 
     <!-- Optional JavaScript -->
@@ -147,12 +207,17 @@ jQuery(document).ready(function()
                     <img src="images/Youtube-modal.PNG">
                     <div id="btn-com" class="btn-com">
                         <hr class="separateur">
-                        Ce texte apparaît grâce à un script javascript
+                        <br>
+                    <form action="index.php" method="post" class="form-com">
+                        <input type="text" name="pseudo" placeholder="Votre Pseudo"><br>
+                        <input type="textarea" name="message" placeholder="Votre commentaire"><br>
+                        <button type="sumbit">Envoyez</button>
+                    </form>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-dark" id="modal-vote">&#x25B2;UpVote</button>
-                    <button type="button" class="btn btn-dark" id="btn-com"><img src="images/commentaire.png" id="commentaire"></button>
+                    <button type="button" class="btn btn-dark" id="btn-com" class="btn-com"><img src="images/commentaire.png" id="commentaire"></button>
                     <button type="button" class="btn btn-secondary" id="quit-btn" data-dismiss="modal">Quitter</button>
                 </div>
             </div>
@@ -178,10 +243,19 @@ jQuery(document).ready(function()
                 </div>
                 <div class="modal-body">
                     <img src="images/facebook_screen.PNG">
+                    <div id="btn-com1" class="btn-com">
+                        <hr class="separateur">
+                        <br>
+                    <form action="index.php" method="post" class="form-com">
+                        <input type="text" name="pseudo" placeholder="Votre Pseudo"><br>
+                        <input type="textarea" name="message" placeholder="Votre commentaire"><br>
+                        <button type="sumbit">Envoyez</button>
+                    </form>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-dark" id="modal-vote">&#x25B2;UpVote</button>
-                    <button type="button" class="btn btn-dark" id="btn-com"><img src="images/commentaire.png" id="commentaire"></button>
+                    <button type="button" class="btn btn-dark" id="btn-com1" class="btn-com"><img src="images/commentaire.png" id="commentaire"></button>
                     <button type="button" class="btn btn-secondary" id="quit-btn" data-dismiss="modal">Quitter</button>
                 </div>
             </div>
@@ -207,10 +281,19 @@ jQuery(document).ready(function()
                 </div>
                 <div class="modal-body">
                     <img src="images/deezer-screen.PNG">
+                    <div id="btn-com2" class="btn-com">
+                        <hr class="separateur">
+                        <br>
+                    <form action="index.php" method="post" class="form-com">
+                        <input type="text" name="pseudo" placeholder="Votre Pseudo"><br>
+                        <input type="textarea" name="message" placeholder="Votre commentaire"><br>
+                        <button type="sumbit">Envoyez</button>
+                    </form>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-dark" id="modal-vote">&#x25B2;UpVote</button>
-                    <button type="button" class="btn btn-dark" id="btn-com"><img src="images/commentaire.png" id="commentaire"></button>
+                    <button type="button" class="btn btn-dark" id="btn-com2" class="btn-com"><img src="images/commentaire.png" id="commentaire"></button>
                     <button type="button" class="btn btn-secondary" id="quit-btn" data-dismiss="modal">Quitter</button>
                 </div>
             </div>
