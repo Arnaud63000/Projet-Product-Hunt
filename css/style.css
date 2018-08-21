@@ -110,46 +110,20 @@ h1 {
     text-align: center;
 }
 
-.titre2
+#config-titre
 {
-    width: 150px;
     position: relative;
-    bottom: 50px;
-    left: 100px;
+    top: 0px;
 }
-.titre2 h2
+#config-text
 {
-    margin-top: 15px;
-}
-.text2
-{
-    position: relative;  
-    bottom: 50px;
-    left: 100px;
-    width: 500px;
-}
-.text2 h3
-{
-    font-size: 1em;
-}
-
-.titre3
-{
-    width: 150px;
     position: relative;
-    bottom: 50px;
-    left: 100px;
+    top: 0px;
 }
-.titre3 h2
+#config-images
 {
-    margin-top: 15px;
-}
-.text3
-{
-    position: relative;  
-    bottom: 50px;
-    left: 100px;
-    width: 500px;
+    position: relative;
+    top: 80px;
 }
 .separateur
 {
@@ -192,11 +166,11 @@ h1 {
     margin-left: 350px;
     font-size: 2em;
 }
-#logo-yt
+#logo
 {
     width: 80px;
     position: relative;
-    bottom: 20px;
+    left: 0px;
 }
 .modal-header a:hover
 {
@@ -217,19 +191,8 @@ h1 {
 {
     background-color: #00C4CC;
 }
-#modal-fb
-{
-    width: 1000px;
-    position: relative;
-    right: 250px;
-}
 
-#logo-fb
-{
-    width: 60px;
-    position: relative;
-      
-}
+
 .images
 {
     position: relative;
@@ -240,4 +203,17 @@ h1 {
     bottom: 35px;
     top: 30px;
 }
+#logo-principale
+{
+    width: 80px;
+    margin-left: 475px;
+}
+#config-block
+{
+    height: 200px;
+}
 
+.modal-body
+{
+    margin-left: 70px;
+}
