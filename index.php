@@ -24,7 +24,7 @@
                     <hr class="my-4">
                         <div class="populaire">
                             <div class="header">TOP 3 des produits les plus populaires ce mois-ci</div>
-                            <hr class="separateur2">
+                            <hr class="separateur">
                             
                         <!-- trigger modal YOUTUBE -->
                         
@@ -46,8 +46,9 @@
                                               
                                               <!-- trigger modal FACEBOOK -->
                             <div id="fb-modal" data-toggle="modal" data-target="#facebookmodal">
-                            <hr class="separateur">
-                                        <div class="images2">
+                            <hr class="separateur"> 
+                            
+                                        <div class="images">
                                             <img src="images/facebook.png" id="img-fb" alt="images-facebook">
                                         </div>
                                     <div class="titre2">
@@ -64,7 +65,7 @@
 
                                     <!-- trigger modal DEEZER -->
                                 <div id="dz-modal" data-toggle="modal" data-target="#deezermodal">
-                                     <div class="images3">
+                                     <div class="images">
                                         <img src="images/deezer.png" id="img-dz" alt="images-deezer">
                                     </div>
                                         <div class="titre3">
@@ -93,9 +94,9 @@
 
  <div class="modal fade" id="youtubemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content" id="modal-yt">
+    <div class="modal-content" id="modal">
       <div class="modal-header">
-      <img src="images/youtube.png" id="logo-yt"> <a href="http://www.Youtube.com"> <h5 class="modal-title" id="exampleModalLabel">Youtube</h5> </a>
+      <img src="images/youtube.png" id="logo"> <a href="http://www.Youtube.com"> <h5 class="modal-title" id="exampleModalLabel">Youtube</h5> </a>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -118,9 +119,9 @@
 
  <div class="modal fade" id="facebookmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content" id="modal-fb">
+    <div class="modal-content" id="modal">
       <div class="modal-header">
-      <img src="images/facebook.png" id="logo-fb"> <a href="http://www.facebook.com"> <h5 class="modal-title" id="exampleModalLabel">Facebook</h5> </a>
+      <img src="images/facebook.png" id="logo"> <a href="http://www.facebook.com"> <h5 class="modal-title" id="exampleModalLabel">Facebook</h5> </a>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -143,9 +144,9 @@
 
  <div class="modal fade" id="deezermodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content" id="modal-dz">
+    <div class="modal-content" id="modal">
       <div class="modal-header">
-      <img src="images/deezer.png" id="logo-dz"> <a href="http://www.deezer.com"> <h5 class="modal-title" id="exampleModalLabel">Deezer</h5> </a>
+      <img src="images/deezer.png" id="logo"> <a href="http://www.deezer.com"> <h5 class="modal-title" id="exampleModalLabel">Deezer</h5> </a>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
