@@ -87,7 +87,7 @@ body, html
 {
     width: 150px;
     position: relative;
-    bottom: 100px;
+    bottom: 50px;
     left: 100px;
 }
 .titre h2
@@ -97,7 +97,7 @@ body, html
 .text
 {
     position: relative;  
-    bottom: 100px;
+    bottom: 50px;
     left: 100px;
     width: 500px;
 }
@@ -137,19 +137,19 @@ h1 {
 {
     width: 150px;
     position: relative;
-    bottom: 90px;
+    bottom: 50px;
     left: 100px;
+}
+.titre3 h2
+{
+    margin-top: 15px;
 }
 .text3
 {
     position: relative;  
-    bottom: 100px;
+    bottom: 50px;
     left: 100px;
     width: 500px;
-}
-.text3 h3
-{
-    font-size: 1em;
 }
 .separateur2
 {
@@ -180,3 +180,69 @@ h1 {
     border: 1px solid #e8e8e8;
     font-size: 0.8em;
 }
+#modal-yt
+{
+    width: 1000px;
+    position: relative;
+    right: 250px;
+}
+
+.modal-title{
+    margin-left: 350px;
+    font-size: 2em;
+}
+#logo-yt
+{
+    width: 80px;
+    position: relative;
+    bottom: 20px;
+}
+.modal-header a:hover
+{
+    text-decoration: none;
+}
+#modal-vote
+{   
+    margin-right: 800px;
+    width: 100Px;
+}
+
+#modal-vote:hover
+{
+    background-color: #00C4CC;
+}
+
+#quit-btn:hover
+{
+    background-color: #00C4CC;
+}
+#yt-modal
+{
+    position: relative;
+    bottom: 29px;
+}
+
+#modal-fb
+{
+    width: 1000px;
+    position: relative;
+    right: 250px;
+}
+
+#logo-fb
+{
+    width: 60px;
+    position: relative;
+      
+}
+.images
+{
+    position: relative;
+    top: 50px;
+}
+#fb-modal
+{
+    bottom: 35px;
+    top: 30px;
+}
+

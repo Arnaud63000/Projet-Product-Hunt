@@ -34,8 +34,8 @@
                                         <div class="text">
                                             <h3>Découvrez ce qui se passe dans le monde en temps réel!</h3>
                                             <a href="techno.php" type="button" class="btn btn-dark" id="btn-ctg">&#x25A4;Techno</a>
-                                            <a type="button" class="btn btn-dark" id="btn-vote">&#x25B2;UpVote</a>
-                                            <a type="button" class="btn btn-dark" id="btn-vote"><img src="images/commentaire.png" id="commentaire"></a>
+                                            <button type="button" class="btn btn-dark" id="btn-vote">&#x25B2;UpVote</button>
+                                            <button type="button" class="btn btn-dark" id="btn-vote"><img src="images/commentaire.png" id="commentaire"></button>
                                         </div>
                                               <hr class="separateur">
                                               
@@ -48,8 +48,8 @@
                                         <div class="text2">
                                             <h3>Le meilleur réseaux social!</h3>
                                             <a href="techno.php" type="button" class="btn btn-dark" id="btn-ctg">&#x25A4;Techno</a>
-                                            <button type="button" class="btn btn-dark" id="btn-vote">&#x25B2; UpVote</a>
-                                            <button type="button" class="btn btn-dark" id="btn-vote"><img src="images/commentaire.png" id="commentaire"></a>
+                                            <button type="button" class="btn btn-dark" id="btn-vote">&#x25B2; UpVote</button>
+                                            <button type="button" class="btn btn-dark" id="btn-vote"><img src="images/commentaire.png" id="commentaire"></button>
                                         </div>
                                         <hr class="separateur">
 
@@ -62,8 +62,8 @@
                                         <div class="text3">
                                             <h3>La meilleure plateforme de musiques!</h3>
                                             <a href="techno.php" type="button" class="btn btn-dark" id="btn-ctg">&#x25A4;Techno</a>
-                                            <button type="button" class="btn btn-dark" id="btn-vote">&#x25B2; UpVote</a>
-                                            <button type="button" class="btn btn-dark" id="btn-vote"><img src="images/commentaire.png" id="commentaire"></a>
+                                            <button type="button" class="btn btn-dark" id="btn-vote">&#x25B2; UpVote</button>
+                                            <button type="button" class="btn btn-dark" id="btn-vote"><img src="images/commentaire.png" id="commentaire"></button>
                                         </div>
                                     </div>      
          </div>

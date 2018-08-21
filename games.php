@@ -34,8 +34,8 @@
                                         <div class="text">
                                             <h3>Forum de jeux vidéo</h3>
                                             <a href="games.php" type="button" class="btn btn-dark" id="btn-ctg">&#x25A4;Games</a>
-                                            <a type="button" class="btn btn-dark" id="btn-vote">&#x25B2;UpVote</a>
-                                            <a type="button" class="btn btn-dark" id="btn-vote"><img src="images/commentaire.png" id="commentaire"></a>
+                                            <button type="button" class="btn btn-dark" id="btn-vote">&#x25B2;UpVote</button>
+                                            <button type="button" class="btn btn-dark" id="btn-vote"><img src="images/commentaire.png" id="commentaire"></button>
                                         </div>
                                               <hr class="separateur">
                                               
@@ -48,8 +48,8 @@
                                         <div class="text2">
                                             <h3>Clés jeux instantanées pas cher</h3>
                                             <a href="games.php" type="button" class="btn btn-dark" id="btn-ctg">&#x25A4;Games</a>
-                                            <button type="button" class="btn btn-dark" id="btn-vote">&#x25B2; UpVote</a>
-                                            <button type="button" class="btn btn-dark" id="btn-vote"><img src="images/commentaire.png" id="commentaire"></a>
+                                            <button type="button" class="btn btn-dark" id="btn-vote">&#x25B2; UpVote</button>
+                                            <button type="button" class="btn btn-dark" id="btn-vote"><img src="images/commentaire.png" id="commentaire"></button>
                                         </div>
                                         <hr class="separateur">
 
@@ -62,8 +62,8 @@
                                         <div class="text3">
                                             <h3>Vos jeux PC & MAC  jusqu'à -70%</h3>
                                             <a href="games.php" type="button" class="btn btn-dark" id="btn-ctg">&#x25A4;Games</a>
-                                            <button type="button" class="btn btn-dark" id="btn-vote">&#x25B2; UpVote</a>
-                                            <button type="button" class="btn btn-dark" id="btn-vote"><img src="images/commentaire.png" id="commentaire"></a>
+                                            <button type="button" class="btn btn-dark" id="btn-vote">&#x25B2; UpVote</button>
+                                            <button type="button" class="btn btn-dark" id="btn-vote"><img src="images/commentaire.png" id="commentaire"></button>
                                         </div>
                                     </div>      
          </div>
