@@ -275,3 +275,9 @@ h1 {
     position: relative;
     left: 550px;
 }
+
+@media screen and (max-width: 540px) {
+#menu{
+    display:none;
+}
+}

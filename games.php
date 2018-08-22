@@ -9,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Projet Product-Hunt</title>
 </head>
@@ -96,6 +97,7 @@
                     crossorigin="anonymous"></script>
                 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
                     crossorigin="anonymous"></script>
+                    <script type="text/javascript" src="js/modal.js"></script>
                 <!-- Modal JVC-->
 
 
@@ -114,6 +116,15 @@
                 </div>
                 <div class="modal-body">
                     <img src="images/jvc-screen.PNG">
+                    <div id="btn-com" class="btn-com">
+                    <hr class="separateur">
+                    <br>
+                <form action="games.php" method="post" class="form-com">
+                    <input type="text" name="pseudo" placeholder="Votre Pseudo"><br>
+                    <input type="textarea" name="message" placeholder="Votre commentaire"><br>
+                    <button type="sumbit">Envoyez</button>
+                </form>
+                </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-dark" id="modal-vote">&#x25B2;UpVote</button>
@@ -146,10 +157,19 @@
                 </div>
                 <div class="modal-body">
                     <img src="images/g2a-screen.PNG">
+                    <div id="btn-com1" class="btn-com">
+                    <hr class="separateur">
+                    <br>
+                <form action="games.php" method="post" class="form-com">
+                    <input type="text" name="pseudo" placeholder="Votre Pseudo"><br>
+                    <input type="textarea" name="message" placeholder="Votre commentaire"><br>
+                    <button type="sumbit">Envoyez</button>
+                </form>
+                </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-dark" id="modal-vote">&#x25B2;UpVote</button>
-                    <button type="button" class="btn btn-dark" id="btn-com"><img src="images/commentaire.png" id="commentaire"></button>
+                    <button type="button" class="btn btn-dark" id="btn-com1"><img src="images/commentaire.png" id="commentaire"></button>
                     <button type="button" class="btn btn-secondary" id="quit-btn" data-dismiss="modal">Quitter</button>
                 </div>
             </div>
@@ -174,10 +194,19 @@
                 </div>
                 <div class="modal-body">
                     <img src="images/instant-gaming-screen.PNG">
+                    <div id="btn-com2" class="btn-com">
+                    <hr class="separateur">
+                    <br>
+                <form action="games.php" method="post" class="form-com">
+                    <input type="text" name="pseudo" placeholder="Votre Pseudo"><br>
+                    <input type="textarea" name="message" placeholder="Votre commentaire"><br>
+                    <button type="sumbit">Envoyez</button>
+                </form>
+                </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-dark" id="modal-vote">&#x25B2;UpVote</button>
-                    <button type="button" class="btn btn-dark" id="btn-com"><img src="images/commentaire.png" id="commentaire"></button>
+                    <button type="button" class="btn btn-dark" id="btn-com2"><img src="images/commentaire.png" id="commentaire"></button>
                     <button type="button" class="btn btn-secondary" id="quit-btn" data-dismiss="modal">Quitter</button>
                 </div>
             </div>
