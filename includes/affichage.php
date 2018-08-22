@@ -39,7 +39,7 @@ while ($donnees = $produit->fetch()) {
             </div>
             <div class="modal-body">
                 <img src=<?=$donnees['photo_description']?>>
-                <div id="btn-com1" class="btn-com">
+                <div id="btn-com" class="btn-com">
                     <hr class="separateur">
                     <br>
                 <form action="index.php" method="post" class="form-com">
@@ -54,7 +54,7 @@ while ($donnees = $produit->fetch()) {
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-dark" id="modal-vote">&#x25B2;UpVote</button>
-                <button type="button" class="btn btn-dark" id="btn-com1" class="btn-com"><img src="images/commentaire.png" id="commentaire"></button>
+                <button type="button" class="btn btn-dark" id="btn-com" class="btn-com"><img src="images/commentaire.png" id="commentaire"></button>
                 <button type="button" class="btn btn-secondary" id="quit-btn" data-dismiss="modal">Quitter</button>
             </div>
         </div>

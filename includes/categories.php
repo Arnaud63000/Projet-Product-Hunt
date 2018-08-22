@@ -1,5 +1,5 @@
 <?php
-$produit = $bdd->query('SELECT * FROM categories ORDER BY id_categories(1) ASC LIMIT 0,5');
+$produit = $bdd->query('SELECT * FROM produits WHERE id_categories='.$_GET['id_categories'].' ORDER BY id_categories ASC LIMIT 0,3');
 
 $i = 0;
 
@@ -39,7 +39,7 @@ while ($donnees = $produit->fetch()) {
             </div>
             <div class="modal-body">
                 <img src=<?=$donnees['photo_description']?>>
-                <div id="btn-com1" class="btn-com">
+                <div id="btn-com" class="btn-com">
                     <hr class="separateur">
                     <br>
                 <form action="index.php" method="post" class="form-com">
