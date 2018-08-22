@@ -1,6 +1,5 @@
 <?php
 $produit = $bdd->query('SELECT * FROM produits WHERE id_categories='.$_GET['id_categories'].' ORDER BY id_categories ASC LIMIT 0,3');
-
 $i = 0;
 
 while ($donnees = $produit->fetch()) {
@@ -15,7 +14,7 @@ while ($donnees = $produit->fetch()) {
                         </div>
                         <div class="text">
                             <h3><?=utf8_encode($donnees['description'])?></h3>
-                            <a href="index.php" type="button" class="btn btn-dark" id="btn-ctg">&#x25A4;Video</a>
+                            <a href="index.php" type="button" class="btn btn-dark" id="btn-ctg">&#x25A4;<?=$donnees['categories']?></a>
                             <button type="button" class="btn btn-dark" id="btn-vote">&#x25B2;UpVote</button>
                             <button type="submit" class="btn btn-dark" id="btn-vote"><a href="index.php"><img src="images/commentaire.png" id="commentaire"></a>
                             </button>
