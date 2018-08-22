@@ -15,7 +15,7 @@ while ($donnees = $produit->fetch()) {
                         </div>
                         <div class="text">
                             <h3><?=utf8_encode($donnees['description'])?></h3>
-                            <a href="index.php" type="button" class="btn btn-dark" id="btn-ctg">&#x25A4;<?=$donnees['categories']?></a>
+                            <a href=<?=$donnees['lien_categories']?> type="button" class="btn btn-dark" id="btn-ctg">&#x25A4;<?=$donnees['categories']?></a>
                             <button type="button" class="btn btn-dark" id="btn-vote">&#x25B2;UpVote</button>
                             <button type="submit" class="btn btn-dark" id="btn-vote"><a href="commentaire.php?commentaire=id"><img src="images/commentaire.png" id="commentaire"></a>
                             </button>
