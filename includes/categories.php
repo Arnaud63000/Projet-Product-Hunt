@@ -17,8 +17,7 @@ while ($donnees = $produit->fetch()) {
                             <h3><?=utf8_encode($donnees['description'])?></h3>
                             <a href="index.php" type="button" class="btn btn-dark" id="btn-ctg">&#x25A4;Video</a>
                             <button type="button" class="btn btn-dark" id="btn-vote">&#x25B2;UpVote</button>
-                            <button type="button" class="btn btn-dark" id="btn-vote">
-                                <img src="images/commentaire.png" id="commentaire">
+                            <button type="submit" class="btn btn-dark" id="btn-vote"><a href="index.php"><img src="images/commentaire.png" id="commentaire"></a>
                             </button>
                         </div>
                     </div>
@@ -39,18 +38,7 @@ while ($donnees = $produit->fetch()) {
             </div>
             <div class="modal-body">
                 <img src=<?=$donnees['photo_description']?>>
-                <div id="btn-com" class="btn-com">
-                    <hr class="separateur">
-                    <br>
-                <form action="index.php" method="post" class="form-com">
-                    <input type="text" name="pseudo" placeholder="Votre Pseudo"><br>
-                    <input type="textarea" name="message" placeholder="Votre commentaire"><br>
-                    <button type="sumbit">Envoyez</button>
-                </form>
-                <div class="zone-com">
-                    jgdhgjsjgsdhk
-                </div>
-                </div>
+                
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-dark" id="modal-vote">&#x25B2;UpVote</button>

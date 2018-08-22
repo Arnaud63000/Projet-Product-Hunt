@@ -134,6 +134,7 @@ h1 {
 #btn-vote
 {
     position: relative;
+    z-index: 10;
     left: 280px;
     width: auto;
     height: 24px;
@@ -213,8 +214,17 @@ h1 {
     margin-left: 475px;
 }
 #config-block
-{
+{   
     height: 200px;
+    z-index: 0;
+}
+#config-block .titre
+{
+    margin-top: 35px;
+}
+#config-block:hover
+{
+    background-color: #E8E4DD;
 }
 
 .modal-body
@@ -259,23 +269,6 @@ h1 {
 /* End boutton message afficher/cacher */
 
 
-.btn-com
-{
-    position: relative;
-    
-    left: 100px;
-}
-.btn-com hr
-{
-    position: relative;
-    right: 150px;
-    margin-top: 10px;
-}
-.form-com
-{
-    position: relative;
-    left: 550px;
-}
 
 @media screen and (max-width: 540px) {
 #menu{
