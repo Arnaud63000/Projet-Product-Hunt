@@ -1,3 +1,8 @@
+<?php 
+            include 'includes/connect.php';
+        ?>
+
+
 <!doctype html>
 <html lang="fr">
 
@@ -8,6 +13,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Projet Product-Hunt</title>
   </head>
@@ -76,6 +82,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
 
     <!-- Modal YOUTUBE-->
 
@@ -94,6 +101,15 @@
                 </div>
                 <div class="modal-body">
                     <img src="images/Youtube-modal.PNG">
+                    <div id="btn-com" class="btn-com">
+                    <hr class="separateur">
+                    <br>
+                <form action="video.php" method="post" class="form-com">
+                    <input type="text" name="pseudo" placeholder="Votre Pseudo"><br>
+                    <input type="textarea" name="message" placeholder="Votre commentaire"><br>
+                    <button type="sumbit">Envoyez</button>
+                </form>
+                </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-dark" id="modal-vote">&#x25B2;UpVote</button>
@@ -123,10 +139,19 @@
                 </div>
                 <div class="modal-body">
                     <img src="images/twitch-screen.PNG">
+                    <div id="btn-com1" class="btn-com">
+                    <hr class="separateur">
+                    <br>
+                <form action="video.php" method="post" class="form-com">
+                    <input type="text" name="pseudo" placeholder="Votre Pseudo"><br>
+                    <input type="textarea" name="message" placeholder="Votre commentaire"><br>
+                    <button type="sumbit">Envoyez</button>
+                </form>
+                </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-dark" id="modal-vote">&#x25B2;UpVote</button>
-                    <button type="button" class="btn btn-dark" id="btn-com"><img src="images/commentaire.png" id="commentaire"></button>
+                    <button type="button" class="btn btn-dark" id="btn-com1"><img src="images/commentaire.png" id="commentaire"></button>
                     <button type="button" class="btn btn-secondary" id="quit-btn" data-dismiss="modal">Quitter</button>
                 </div>
             </div>
@@ -152,10 +177,19 @@
                 </div>
                 <div class="modal-body">
                     <img src="images/daily-screen.PNG">
+                    <div id="btn-com2" class="btn-com">
+                    <hr class="separateur">
+                    <br>
+                <form action="video.php" method="post" class="form-com">
+                    <input type="text" name="pseudo" placeholder="Votre Pseudo"><br>
+                    <input type="textarea" name="message" placeholder="Votre commentaire"><br>
+                    <button type="sumbit">Envoyez</button>
+                </form>
+                </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-dark" id="modal-vote">&#x25B2;UpVote</button>
-                    <button type="button" class="btn btn-dark" id="btn-com"><img src="images/commentaire.png" id="commentaire"></button>
+                    <button type="button" class="btn btn-dark" id="btn-com2"><img src="images/commentaire.png" id="commentaire"></button>
                     <button type="button" class="btn btn-secondary" id="quit-btn" data-dismiss="modal">Quitter</button>
                 </div>
             </div>

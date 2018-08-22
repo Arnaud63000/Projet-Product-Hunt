@@ -1,3 +1,8 @@
+<?php 
+            include 'includes/connect.php';
+    ?>
+
+
 <!doctype html>
 <html lang="fr">
 
@@ -29,64 +34,13 @@
                 <div class="header">TOP 3 des produits les plus populaires ce mois-ci</div>
                 <hr class="separateur">
 
-                <!-- trigger modal YOUTUBE -->
+                
+                 
+                <?php
+        
+                    include 'includes/affichage.php'
+                    ?>
 
-
-                <div id="config-block" data-toggle="modal" data-target="#youtubemodal">
-                    <div class="images">
-                        <img src="images/youtube.png" id="img-yt" alt="images-youtube">
-                    </div>
-                    <div class="titre">
-                        <h2>Youtube</h2>
-                    </div>
-                    <div class="text">
-                        <h3>La meilleure plateforme de partages de vidéos!</h3>
-                        <a href="video.php" type="button" class="btn btn-dark" id="btn-ctg">&#x25A4;Video</a>
-                        <button type="button" class="btn btn-dark" id="btn-vote">&#x25B2;UpVote</button>
-                        <button type="button" class="btn btn-dark" id="btn-vote">
-                            <img src="images/commentaire.png" id="commentaire">
-                        </button>
-                    </div>
-                </div>
-
-                <!-- trigger modal FACEBOOK -->
-                <div id="config-block" data-toggle="modal" data-target="#facebookmodal">
-                    <hr class="separateur">
-
-                    <div class="images">
-                        <img src="images/facebook.png" id="img-fb" alt="images-facebook">
-                    </div>
-                    <div class="titre">
-                        <h2>Facebook</h2>
-                    </div>
-                    <div class="text">
-                        <h3>Le meilleur réseaux social!</h3>
-                        <a href="techno.php" type="button" class="btn btn-dark" id="btn-ctg">&#x25A4;Techno</a>
-                        <button type="button" class="btn btn-dark" id="btn-vote">&#x25B2; UpVote</button>
-                        <button type="button" class="btn btn-dark" id="btn-vote">
-                            <img src="images/commentaire.png" id="commentaire">
-                        </button>
-                    </div>
-                </div>
-                <hr class="separateur">
-
-                <!-- trigger modal DEEZER -->
-                <div id="config-block" data-toggle="modal" data-target="#deezermodal">
-                    <div class="images">
-                        <img src="images/deezer.png" id="img-dz" alt="images-deezer">
-                    </div>
-                    <div class="titre">
-                        <h2>Deezer</h2>
-                    </div>
-                    <div class="text">
-                        <h3>La meilleure plateforme de musiques!</h3>
-                        <a href="video.php" type="button" class="btn btn-dark" id="btn-ctg">&#x25A4;Music</a>
-                        <button type="button" class="btn btn-dark" id="btn-vote">&#x25B2; UpVote</button>
-                        <button type="button" class="btn btn-dark" id="btn-vote">
-                            <img src="images/commentaire.png" id="commentaire">
-                        </button>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -108,116 +62,7 @@
     <script type="text/javascript" src="js/modal.js"></script>
 <!-- Modal YOUTUBE-->
 
-<div class="modal fade" id="youtubemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content" id="modal">
-            <div class="modal-header">
-                <img src="images/youtube.png" id="logo">
-                <a href="http://www.Youtube.com" target="blank">
-                    <h5 class="modal-title" id="exampleModalLabel">Youtube</h5>
-                </a>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <img src="images/Youtube-modal.PNG">
-                <div id="btn-com" class="btn-com">
-                    <hr class="separateur">
-                    <br>
-                <form action="index.php" method="post" class="form-com">
-                    <input type="text" name="pseudo" placeholder="Votre Pseudo"><br>
-                    <input type="textarea" name="message" placeholder="Votre commentaire"><br>
-                    <button type="sumbit">Envoyez</button>
-                </form>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-dark" id="modal-vote">&#x25B2;UpVote</button>
-                <button type="button" class="btn btn-dark" id="btn-com" class="btn-com"><img src="images/commentaire.png" id="commentaire"></button>
-                <button type="button" class="btn btn-secondary" id="quit-btn" data-dismiss="modal">Quitter</button>
-            </div>
-        </div>
-    </div>
-</div>
 
-<!-- End Modal -->
-
-<!-- Modal FACEBOOK-->
-
-
-<div class="modal fade" id="facebookmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content" id="modal">
-            <div class="modal-header">
-                <img src="images/facebook.png" id="logo">
-                <a href="http://www.facebook.com" target="blank">
-                    <h5 class="modal-title" id="exampleModalLabel">Facebook</h5>
-                </a>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <img src="images/facebook_screen.PNG">
-                <div id="btn-com1" class="btn-com">
-                    <hr class="separateur">
-                    <br>
-                <form action="index.php" method="post" class="form-com">
-                    <input type="text" name="pseudo" placeholder="Votre Pseudo"><br>
-                    <input type="textarea" name="message" placeholder="Votre commentaire"><br>
-                    <button type="sumbit">Envoyez</button>
-                </form>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-dark" id="modal-vote">&#x25B2;UpVote</button>
-                <button type="button" class="btn btn-dark" id="btn-com1" class="btn-com"><img src="images/commentaire.png" id="commentaire"></button>
-                <button type="button" class="btn btn-secondary" id="quit-btn" data-dismiss="modal">Quitter</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- End Modal -->
-
-<!-- Modal DEEZER-->
-
-
-<div class="modal fade" id="deezermodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content" id="modal">
-            <div class="modal-header">
-                <img src="images/deezer.png" id="logo">
-                <a href="http://www.deezer.com" target="blank">
-                    <h5 class="modal-title" id="exampleModalLabel">Deezer</h5>
-                </a>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <img src="images/deezer-screen.PNG">
-                <div id="btn-com2" class="btn-com">
-                    <hr class="separateur">
-                    <br>
-                <form action="index.php" method="post" class="form-com">
-                    <input type="text" name="pseudo" placeholder="Votre Pseudo"><br>
-                    <input type="textarea" name="message" placeholder="Votre commentaire"><br>
-                    <button type="sumbit">Envoyez</button>
-                </form>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-dark" id="modal-vote">&#x25B2;UpVote</button>
-                <button type="button" class="btn btn-dark" id="btn-com2" class="btn-com"><img src="images/commentaire.png" id="commentaire"></button>
-                <button type="button" class="btn btn-secondary" id="quit-btn" data-dismiss="modal">Quitter</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- End Modal -->
 
 </body>
 

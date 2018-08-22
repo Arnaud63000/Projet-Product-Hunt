@@ -1,3 +1,8 @@
+<?php 
+            include 'includes/connect.php';
+        ?>
+
+
 <!doctype html>
 <html lang="fr">
 
@@ -59,7 +64,7 @@
                                         <hr class="separateur">
                                     <div id="config-block" data-toggle="modal" data-target="#deezermodal">
                                      <div class="images">
-                                        <img src="images/deezer.png" id="img-dz" alt="images-deezer">
+                                        <img src="c" id="img-dz" alt="images-deezer">
                                     </div>
                                         <div class="titre">
                                             <h2>Deezer</h2>

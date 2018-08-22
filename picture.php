@@ -1,3 +1,8 @@
+<?php 
+            include 'includes/connect.php';
+        ?>
+
+
 <!doctype html>
 <html lang="fr">
 
