@@ -293,5 +293,9 @@ h1 {
     margin-left: 70px;
     width: 80px;
 }
+
+.btn-commentaire:hover
+{
+    background-color: #00C4CC;
 }
 

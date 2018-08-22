@@ -1,5 +1,6 @@
 <?php
 $produit = $bdd->query('SELECT * FROM produits WHERE id_categories='.$_GET['id_categories'].' ORDER BY id_categories ASC LIMIT 0,3');
+
 $i = 0;
 
 while ($donnees = $produit->fetch()) {
@@ -16,7 +17,7 @@ while ($donnees = $produit->fetch()) {
                             <h3><?=utf8_encode($donnees['description'])?></h3>
                             <a href=<?=$donnees['lien_categories']?> type="button" class="btn btn-dark" id="btn-ctg">&#x25A4;<?=$donnees['categories']?></a>
                             <button type="button" class="btn btn-dark" id="btn-vote">&#x25B2;UpVote</button>
-                            <button type="submit" class="btn btn-dark" id="btn-vote"><a href="index.php"><img src="images/commentaire.png" id="commentaire"></a>
+                            <button type="submit" class="btn btn-dark" id="btn-vote"><a href="commentaire.php?id=<?=$donnees['id']; ?>"<img src="./images/commentaire.png"><img src="./images/commentaire.png" id="commentaire"></a>
                             </button>
                         </div>
                     </div>
@@ -41,7 +42,6 @@ while ($donnees = $produit->fetch()) {
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-dark" id="modal-vote">&#x25B2;UpVote</button>
-                <button type="button" class="btn btn-dark" id="btn-com1" class="btn-com"><img src="images/commentaire.png" id="commentaire"></button>
                 <button type="button" class="btn btn-secondary" id="quit-btn" data-dismiss="modal">Quitter</button>
             </div>
         </div>
