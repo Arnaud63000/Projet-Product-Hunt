@@ -1,46 +1,16 @@
-/*
-$("#btn-vote").click(function(){
+$('.btn-vote').click(function (event){
+    let $form = $(this).parents('form');
+    let $count = $(this).find('span');
 
-     
+    console.log($form);
 
-    $.ajax({
-
-       url : '../includes/vote.php',
-
-       type : 'POST',
-
-       dataType : '',
-
-       success : function(code_html, statut){
-
-           $(code_html).appendTo("#commentaires"); // On passe code_html à jQuery() qui va nous créer l'arbre DOM !
-
-       },
-
-
-       error : function(resultat, statut, erreur){
-
-         
-
-       },
-
-
-       complete : function(resultat, statut){
-
-
-       }
-
-
-    });
-
-   
-
+    $.post('includes/vote.php', $form.serialize(), function(error){
+        if (error){
+            alert(error);
+        }
+        $count.text(
+            parseInt($count.text()) + 1
+        );
+    }) 
+    return false;
 });
-*/
-
-
-setInterval(
-    function () {
-      $('#btn-vote').load('index.php').fadeIn("slow");
-     } 
-     , 3000);

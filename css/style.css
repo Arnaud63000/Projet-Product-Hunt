@@ -131,7 +131,7 @@ h1 {
     margin: 0;
     
 }
-#btn-vote
+.btn-vote
 {
     position: relative;
     z-index: 10;

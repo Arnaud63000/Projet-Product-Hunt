@@ -1,4 +1,3 @@
-
 <?php
     include 'connect.php';
 
@@ -11,5 +10,3 @@ $vote = $bdd->query('UPDATE votes
 
 if(!$vote) {    
      die("Erreur mysql : ".$bdd->errorInfo()[2]); }
-    
-     ?>
