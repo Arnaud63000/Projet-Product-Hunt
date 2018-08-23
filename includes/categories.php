@@ -1,11 +1,13 @@
 <?php
-$produit = $bdd->query('SELECT * FROM produits WHERE id_categories='.$_GET['id_categories'].' ORDER BY id_categories ASC LIMIT 0,3');
+$produit = $bdd->query('SELECT * FROM produits LEFT JOIN votes ON votes.nom_produit = produits.nom_produit WHERE id_categories='.$_GET['id_categories'].' ORDER BY id_categories ASC LIMIT 0,3');
 
 $i = 0;
 
 while ($donnees = $produit->fetch()) {
 
 ?>
+
+
     <div id="config-block" data-toggle="modal" data-target="#modal<?=$i?>">
                         <div class="images">
                             <img src=<?=$donnees['logo']?> id="img-yt" alt="images-youtube">
@@ -16,9 +18,10 @@ while ($donnees = $produit->fetch()) {
                         <div class="text">
                             <h3><?=utf8_encode($donnees['description'])?></h3>
                             <a href=<?=$donnees['lien_categories']?> type="button" class="btn btn-dark" id="btn-ctg">&#x25A4;<?=$donnees['categories']?></a>
-                            <button type="button" class="btn btn-dark" id="btn-vote">&#x25B2;UpVote</button>
-                            <button type="submit" class="btn btn-dark" id="btn-vote"><a href="commentaire.php?id=<?=$donnees['id']; ?>"<img src="./images/commentaire.png"><img src="./images/commentaire.png" id="commentaire"></a>
-                            </button>
+                            <form action="includes/vote.php" method="post">
+                                <button type="submit" class="btn btn-dark" name="vote-btn" value="<?=$donnees['nom_produit']?> " id="btn-vote">&#x25B2; <?=$donnees['vote']?></button>
+                            </form>
+                            <a href="commentaire.php?id=<?=$donnees['id']; ?>" class="btn-commentaire" <img src="./images/commentaire.png"><img src="./images/commentaire.png" id="commentaire"></a>
                         </div>
                     </div>
                     <hr class="separateur">
@@ -53,3 +56,4 @@ while ($donnees = $produit->fetch()) {
 }
 $produit->closeCursor();
 ?>
+<script src="../js/vote.js"></script>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.2
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 22 août 2018 à 22:45
--- Version du serveur :  5.7.19
--- Version de PHP :  7.2.8
+-- Host: localhost
+-- Generation Time: Aug 23, 2018 at 03:03 PM
+-- Server version: 10.1.34-MariaDB
+-- PHP Version: 7.2.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,24 +19,22 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `hunter_prod`
+-- Database: `hunter_prod`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `categories`
+-- Table structure for table `categories`
 --
 
-DROP TABLE IF EXISTS `categories`;
-CREATE TABLE IF NOT EXISTS `categories` (
-  `id_categories` int(11) NOT NULL AUTO_INCREMENT,
-  `categories` varchar(255) NOT NULL,
-  PRIMARY KEY (`id_categories`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+CREATE TABLE `categories` (
+  `id_categories` int(11) NOT NULL,
+  `categories` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `categories`
+-- Dumping data for table `categories`
 --
 
 INSERT INTO `categories` (`id_categories`, `categories`) VALUES
@@ -49,71 +47,136 @@ INSERT INTO `categories` (`id_categories`, `categories`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `messages`
+-- Table structure for table `messages`
 --
 
-DROP TABLE IF EXISTS `messages`;
-CREATE TABLE IF NOT EXISTS `messages` (
-  `id_produits` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `messages` (
+  `id_produits` int(11) NOT NULL,
   `pseudo` varchar(255) NOT NULL,
-  `commentaires` varchar(255) NOT NULL,
-  PRIMARY KEY (`id_produits`)
+  `commentaires` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `produits`
+-- Table structure for table `produits`
 --
 
-DROP TABLE IF EXISTS `produits`;
-CREATE TABLE IF NOT EXISTS `produits` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `produits` (
+  `id` int(11) NOT NULL,
   `nom_produit` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL,
   `logo` varchar(255) NOT NULL,
   `id_messages` int(11) NOT NULL,
   `lien_site` varchar(255) NOT NULL,
-  `id_like` int(11) NOT NULL,
   `id_categories` int(11) NOT NULL,
   `photo_description` varchar(255) NOT NULL,
   `categories` varchar(255) NOT NULL,
-  `lien_categories` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+  `lien_categories` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `produits`
+-- Dumping data for table `produits`
 --
 
-INSERT INTO `produits` (`id`, `nom_produit`, `description`, `logo`, `id_messages`, `lien_site`, `id_like`, `id_categories`, `photo_description`, `categories`, `lien_categories`) VALUES
-(1, 'Youtube', 'La meilleure plateforme de partages de vidéos!', 'images/youtube.png', 0, 'http://www.Youtube.com', 0, 4, 'images/Youtube-modal.PNG', 'Video', 'video.php?id_categories=4'),
-(2, 'Facebook', 'Le meilleur réseaux social!', 'images/facebook.png', 0, 'http://www.facebook.com', 0, 1, 'images/facebook_screen.PNG', 'Techno', 'techno.php?id_categories=1'),
-(3, 'Deezer', 'La meilleure plateforme de musiques!', 'images/deezer.png', 0, 'http://www.deezer.com', 0, 2, 'images/deezer-screen.PNG', 'Music', 'music.php?id_categories=2'),
-(4, 'Twitter', 'Decouvrez ce qui se passe dans le monde réel!', 'images/twitter.png', 0, 'http://www.twitter.com', 0, 1, 'images/twitter-screen.PNG', 'Techno', 'techno.php?id_categories=1'),
-(5, 'FuturaTech', 'La meilleure plateforme de musiques!', 'images/futura.png', 0, 'http://www.futura-sciences.com', 0, 1, 'images/futura-screen.PNG', 'Techno', 'techno.php?id_categories=1'),
-(6, 'Spotify', 'De la musique pour tous!', 'images/spotify.png', 0, 'http://www.spotify.com', 0, 2, 'images/spotify_screen.PNG', 'Music', 'music.php?id_categories=2'),
-(7, 'Typos', 'Ecoutez de la musique avec passion', 'images/Logo_TYPOS.png', 0, '', 0, 2, 'images/screen_Typos.png', 'Music', 'music.php?id_categories=2'),
-(8, 'JeuxVideo.com', 'Forum de jeux vidéo', 'images/jeuxvideopointcom.png', 0, 'http://www.jeuxvideo.com', 0, 3, 'images/jvc-screen.PNG', 'Games', 'games.php?id_categories=3'),
-(9, 'G2A', 'Clés jeux instantanées pas cher', 'images/logoG2A.png', 0, 'http://g2a.com', 0, 3, 'images/g2a-screen.PNG', 'Games', 'games.php?id_categories=3'),
-(10, 'Instant Gaming', 'Vos jeux PC & MAC jusqu\'à -70%', 'images/instantgaming.png', 0, 'http://www.instant-gaming.com', 0, 3, 'images/instant-gaming-screen.PNG', 'Games', 'games.php?id_categories=3'),
-(11, 'Twitch', 'Le meilleur du stream', 'images/twitch.png', 0, 'http://www.twitch.com', 0, 4, 'images/twitch-screen.PNG', 'Video', 'video.php?id_categories=4'),
-(12, 'Dailymotion', 'Explorez et regardez des vidéos en ligne', 'images/dailymotion.png', 0, 'http://www.dailymotion.com', 0, 4, 'images/daily-screen.PNG', 'Video', 'video.php?id_categories=4'),
-(13, 'Instagram', 'Mettez en ligne vos photos!', 'images/insta.png', 0, 'http://www.instagram.com', 0, 5, 'images/Instagram-screen.PNG', 'Photo', 'picture.php?id_categories=5'),
-(14, 'Picsart', 'Explorez plus de 100.000.000 de photos sur Picsart !', 'images/picsart.png', 0, 'http://www.picsart.com', 0, 5, 'images/Picsart_screen.png', 'Photo', 'picture.php?id_categories=5'),
-(15, 'Instatram', 'La meilleure plateforme de musiques!', 'images/instatram.png', 0, '', 0, 5, '', 'Photo', 'picture.php?id_categories=5');
+INSERT INTO `produits` (`id`, `nom_produit`, `description`, `logo`, `id_messages`, `lien_site`, `id_categories`, `photo_description`, `categories`, `lien_categories`) VALUES
+(1, 'Youtube', 'La meilleure plateforme de partages de vidéos!', 'images/youtube.png', 0, 'http://www.Youtube.com', 4, 'images/Youtube-modal.PNG', 'Video', 'video.php?id_categories=4'),
+(2, 'Facebook', 'Le meilleur réseaux social!', 'images/facebook.png', 0, 'http://www.facebook.com', 1, 'images/facebook_screen.PNG', 'Techno', 'techno.php?id_categories=1'),
+(3, 'Deezer', 'La meilleure plateforme de musiques!', 'images/deezer.png', 0, 'http://www.deezer.com', 2, 'images/deezer-screen.PNG', 'Music', 'music.php?id_categories=2'),
+(4, 'Twitter', 'Decouvrez ce qui se passe dans le monde réel!', 'images/twitter.png', 0, 'http://www.twitter.com', 1, 'images/twitter-screen.PNG', 'Techno', 'techno.php?id_categories=1'),
+(5, 'FuturaTech', 'La meilleure plateforme de musiques!', 'images/futura.png', 0, 'http://www.futura-sciences.com', 1, 'images/futura-screen.PNG', 'Techno', 'techno.php?id_categories=1'),
+(6, 'Spotify', 'De la musique pour tous!', 'images/spotify.png', 0, 'http://www.spotify.com', 2, 'images/spotify_screen.PNG', 'Music', 'music.php?id_categories=2'),
+(7, 'Typos', 'Ecoutez de la musique avec passion', 'images/Logo_TYPOS.png', 0, '', 2, 'images/screen_Typos.png', 'Music', 'music.php?id_categories=2'),
+(8, 'JeuxVideo.com', 'Forum de jeux vidéo', 'images/jeuxvideopointcom.png', 0, 'http://www.jeuxvideo.com', 3, 'images/jvc-screen.PNG', 'Games', 'games.php?id_categories=3'),
+(9, 'G2A', 'Clés jeux instantanées pas cher', 'images/logoG2A.png', 0, 'http://g2a.com', 3, 'images/g2a-screen.PNG', 'Games', 'games.php?id_categories=3'),
+(10, 'Instant Gaming', 'Vos jeux PC & MAC jusqu\'à -70%', 'images/instantgaming.png', 0, 'http://www.instant-gaming.com', 3, 'images/instant-gaming-screen.PNG', 'Games', 'games.php?id_categories=3'),
+(11, 'Twitch', 'Le meilleur du stream', 'images/twitch.png', 0, 'http://www.twitch.com', 4, 'images/twitch-screen.PNG', 'Video', 'video.php?id_categories=4'),
+(12, 'Dailymotion', 'Explorez et regardez des vidéos en ligne', 'images/dailymotion.png', 0, 'http://www.dailymotion.com', 4, 'images/daily-screen.PNG', 'Video', 'video.php?id_categories=4'),
+(13, 'Instagram', 'Mettez en ligne vos photos!', 'images/insta.png', 0, 'http://www.instagram.com', 5, 'images/Instagram-screen.PNG', 'Photo', 'picture.php?id_categories=5'),
+(14, 'Picsart', 'Explorez plus de 100.000.000 de photos sur Picsart !', 'images/picsart.png', 0, 'http://www.picsart.com', 5, 'images/Picsart_screen.png', 'Photo', 'picture.php?id_categories=5'),
+(15, 'Instatram', 'La meilleure plateforme de musiques!', 'images/instatram.png', 0, '', 5, '', 'Photo', 'picture.php?id_categories=5');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `vote`
+-- Table structure for table `votes`
 --
 
-DROP TABLE IF EXISTS `vote`;
-CREATE TABLE IF NOT EXISTS `vote` (
-  `up` int(11) NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`up`)
+CREATE TABLE `votes` (
+  `nom_produit` varchar(255) NOT NULL,
+  `vote` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `votes`
+--
+
+INSERT INTO `votes` (`nom_produit`, `vote`) VALUES
+('Dailymotion', 0),
+('Deezer', 7),
+('Facebook', 13),
+('FuturaTech', 0),
+('G2A', 5),
+('Instagram', 7),
+('Instant Gaming', 21),
+('Instatram', 1),
+('JeuxVideo.com', 11),
+('Picsart', 3),
+('Spotify', 0),
+('Twitch', 2),
+('Twitter', 2),
+('Typos', 0),
+('Youtube', 52);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `categories`
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`id_categories`);
+
+--
+-- Indexes for table `messages`
+--
+ALTER TABLE `messages`
+  ADD PRIMARY KEY (`id_produits`);
+
+--
+-- Indexes for table `produits`
+--
+ALTER TABLE `produits`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `votes`
+--
+ALTER TABLE `votes`
+  ADD PRIMARY KEY (`nom_produit`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `id_categories` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `messages`
+--
+ALTER TABLE `messages`
+  MODIFY `id_produits` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `produits`
+--
+ALTER TABLE `produits`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

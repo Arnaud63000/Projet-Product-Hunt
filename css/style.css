@@ -146,6 +146,9 @@ h1 {
 #commentaire
 {
     width: 18px;
+    position: relative;
+    left: 400px;
+    bottom: 20px;
 }
 #btn-ctg{
     position: relative;
@@ -289,6 +292,8 @@ h1 {
     margin-left: 0px;
     width: auto;
 }
+}
+
 #logo-principale{
     margin-left: 70px;
     width: 80px;
@@ -298,4 +303,3 @@ h1 {
 {
     background-color: #00C4CC;
 }
-
