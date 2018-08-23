@@ -1,6 +1,9 @@
 <?php
     include 'includes/connect.php';
-    
+
+                    
+
+
 ?>
 
 
@@ -24,17 +27,67 @@
         while($donnees = $produit->fetch())
         {          
         ?>
-            <div class="container-fluid">
-                <div class="container">
-                    <div class="row">
-                        <div class="jumbotron">
-                            <img src=<?=$donnees['logo']?>>
-                            <?=$donnees['nom_produit'];  ?>
-                         </div>
+            
+                <div class="header">
+                    <div class="info-page">
+                        <h1>Fiche technique <?=$donnees['nom_produit']?></h1>
                     </div>
                 </div>
-            </div>
+                <div class="jumbotron">
+                    <img src=<?=$donnees['logo']?>>
+                    <br><br>
+                    <div class="desc-produit">
+                        <h3>Description:</h3>
+                        <p><?=utf8_encode($donnees['description'])?></p>
+                    </div>
+                </div>
+                
+  
+                      <div class="formulaire">
+                        <form action="" method="POST" class="form-com">
+                            <input type="text" name="pseudo" placeholder="Votre pseudo"><br>
+                            <input type="text" name="commentaire" placeholder="Votre commentaire"><br>
+                            <button type="submit" name="btn-com" class="btn-send">Envoyer</button>
+                        </form>
+                    </div>
+                </div>
+           
+                    
+                        
+                 
         <?php
         }
         $produit->closeCursor();
         ?>
+             <div class="jumbotron espace-com">
+                    <h4>Espace commentaire</h4>
+                    <div class="zone-commentaire">
+                    <?php
+                    $pseudo = $_POST['pseudo'];
+                    $commentaires = $_POST['commentaire'];
+                    
+                    
+                        $messages = $bdd->query('SELECT * FROM messages LEFT JOIN produits ON produits.nom_produit = messages.nom_produit WHERE id='.$_GET['id'].' ');
+                        $message = $bdd->query('INSERT INTO messages(pseudo, commentaires)  WHERE nom_produit='.$_GET['id'].' VALUES(?, ?)');
+                        
+
+                
+
+                    while ($reponse = $messages->fetch())
+                    {
+                    ?>
+                        <p><?=$reponse['pseudo']?> : <?=$reponse['commentaires']?></p><br>
+                            
+
+                    
+
+                    <?php
+
+                    }
+
+                    ?>
+                    
+
+
+
+                  
