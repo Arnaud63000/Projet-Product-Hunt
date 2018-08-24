@@ -30,5 +30,6 @@ html, body
 .formulaire
 {
 	position: relative;
-	left: 1500px;
+	left: 1000px;
+	z-index: 1;
 }

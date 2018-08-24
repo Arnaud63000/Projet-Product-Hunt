@@ -19,4 +19,20 @@ catch(Exception $e)
         die('Erreur : '.$e->getMessage());
 
 }
+
+function queryOrDie($sql) {
+    global $bdd;
+
+    $result = $bdd->query($sql);
+
+    if(!$result) {
+        echo $sql."<br><br>";
+
+        die('Erreur MySQL : '. $bdd->errorInfo()[2]);
+    }
+
+    return $result;
+}
+
+
 ?>

@@ -1,9 +1,5 @@
 <?php
     include 'includes/connect.php';
-
-                    
-
-
 ?>
 
 
@@ -20,6 +16,7 @@
         crossorigin="anonymous">
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
     <link rel="stylesheet" type="text/css" href="css/commentaire.css">
+</head>
 
     <?php
         $produit = $bdd->query('SELECT * FROM produits WHERE id='.$_GET['id'].' ORDER BY id');
@@ -41,9 +38,18 @@
                         <p><?=utf8_encode($donnees['description'])?></p>
                     </div>
                 </div>
-                
-  
-                      <div class="formulaire">
+
+        <?php
+        }
+        $produit->closeCursor();
+        ?>
+             <div class="jumbotron espace-com">
+                    <h4>Espace commentaire</h4>
+                    <div class="zone-commentaire">
+
+
+
+                     <div class="formulaire">
                         <form action="" method="POST" class="form-com">
                             <input type="text" name="pseudo" placeholder="Votre pseudo"><br>
                             <input type="text" name="commentaire" placeholder="Votre commentaire"><br>
@@ -52,42 +58,30 @@
                     </div>
                 </div>
            
-                    
-                        
-                 
-        <?php
-        }
-        $produit->closeCursor();
-        ?>
-             <div class="jumbotron espace-com">
-                    <h4>Espace commentaire</h4>
-                    <div class="zone-commentaire">
                     <?php
-                    $pseudo = $_POST['pseudo'];
-                    $commentaires = $_POST['commentaire'];
-                    
-                    
-                        $messages = $bdd->query('SELECT * FROM messages LEFT JOIN produits ON produits.nom_produit = messages.nom_produit WHERE id='.$_GET['id'].' ');
-                        $message = $bdd->query('INSERT INTO messages(pseudo, commentaires)  WHERE nom_produit='.$_GET['id'].' VALUES(?, ?)');
-                        
+              
+                        $pseudo = $_POST['pseudo'];
+                            $commentaires = $_POST['commentaire'];
+                            $produits = $_GET['id'];
+                                            
+                        $message = $bdd->query('INSERT INTO messages(id, pseudo, commentaires) VALUES("'.$_GET['id'].'", "'.$_POST['pseudo'].'","'.$_POST['commentaire'].'")');
 
-                
+                        ?>
+                                                
+                        <?php      
+                        $messages = queryOrDie('SELECT * FROM messages LEFT JOIN produits ON produits.id = messages.id WHERE messages.id='.$_GET['id']);
 
-                    while ($reponse = $messages->fetch())
-                    {
-                    ?>
+                        while ($reponse = $messages->fetch())
+                        {
+                        ?>
                         <p><?=$reponse['pseudo']?> : <?=$reponse['commentaires']?></p><br>
-                            
+                        
+                        <?php
+                        }
 
+                        ?>
+                                            
                     
-
-                    <?php
-
-                    }
-
-                    ?>
-                    
-
-
+               
 
                   

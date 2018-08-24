@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.2
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 23 août 2018 à 23:23
--- Version du serveur :  5.7.19
--- Version de PHP :  7.2.8
+-- Host: localhost
+-- Generation Time: Aug 24, 2018 at 12:00 PM
+-- Server version: 10.1.34-MariaDB
+-- PHP Version: 7.2.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,24 +19,22 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `hunter_prod`
+-- Database: `hunter_prod`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `categories`
+-- Table structure for table `categories`
 --
 
-DROP TABLE IF EXISTS `categories`;
-CREATE TABLE IF NOT EXISTS `categories` (
-  `id_categories` int(11) NOT NULL AUTO_INCREMENT,
-  `categories` varchar(255) NOT NULL,
-  PRIMARY KEY (`id_categories`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+CREATE TABLE `categories` (
+  `id_categories` int(11) NOT NULL,
+  `categories` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `categories`
+-- Dumping data for table `categories`
 --
 
 INSERT INTO `categories` (`id_categories`, `categories`) VALUES
@@ -49,47 +47,41 @@ INSERT INTO `categories` (`id_categories`, `categories`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `messages`
+-- Table structure for table `messages`
 --
 
-DROP TABLE IF EXISTS `messages`;
-CREATE TABLE IF NOT EXISTS `messages` (
-  `nom_produit` varchar(255) NOT NULL,
+CREATE TABLE `messages` (
+  `id` varchar(255) NOT NULL,
   `pseudo` varchar(255) NOT NULL,
-  `commentaires` varchar(255) NOT NULL,
-  PRIMARY KEY (`nom_produit`)
+  `commentaires` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `messages`
+-- Dumping data for table `messages`
 --
 
-INSERT INTO `messages` (`nom_produit`, `pseudo`, `commentaires`) VALUES
-('Instatram', '', ''),
-('Picsart', '', ''),
-('Instagram', '', ''),
-('Dailymotion', '', ''),
-('Twitch', '', ''),
-('Instant Gaming', '', ''),
-('G2A', '', ''),
-('JeuxVideo.com', '', ''),
-('Typos', '', ''),
-('Spotify', '', ''),
-('FuturaTech', '', ''),
-('Twitter', '', ''),
-('Deezer', '', ''),
-('Facebook', '', ''),
-('Youtube', 'Arnaud', 'Hello');
+INSERT INTO `messages` (`id`, `pseudo`, `commentaires`) VALUES
+('4', 'hello', 'yoyo'),
+('4', 'hello', 'yoyo'),
+('4', 'hello', 'yoyo'),
+('4', 'hello', 'yoyo'),
+('4', 'hello', 'yoyo'),
+('4', 'hello', 'yoyo'),
+('1', '', ''),
+('1', 'Arnaud', 'hello'),
+('4', '', ''),
+('12', '', ''),
+('12', 'yve', 'dhsqjfdhqjkd'),
+('1', '', '');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `produits`
+-- Table structure for table `produits`
 --
 
-DROP TABLE IF EXISTS `produits`;
-CREATE TABLE IF NOT EXISTS `produits` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `produits` (
+  `id` int(11) NOT NULL,
   `nom_produit` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL,
   `logo` varchar(255) NOT NULL,
@@ -98,12 +90,11 @@ CREATE TABLE IF NOT EXISTS `produits` (
   `id_categories` int(11) NOT NULL,
   `photo_description` varchar(255) NOT NULL,
   `categories` varchar(255) NOT NULL,
-  `lien_categories` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+  `lien_categories` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `produits`
+-- Dumping data for table `produits`
 --
 
 INSERT INTO `produits` (`id`, `nom_produit`, `description`, `logo`, `id_messages`, `lien_site`, `id_categories`, `photo_description`, `categories`, `lien_categories`) VALUES
@@ -126,18 +117,16 @@ INSERT INTO `produits` (`id`, `nom_produit`, `description`, `logo`, `id_messages
 -- --------------------------------------------------------
 
 --
--- Structure de la table `votes`
+-- Table structure for table `votes`
 --
 
-DROP TABLE IF EXISTS `votes`;
-CREATE TABLE IF NOT EXISTS `votes` (
+CREATE TABLE `votes` (
   `nom_produit` varchar(255) NOT NULL,
-  `vote` int(11) NOT NULL,
-  PRIMARY KEY (`nom_produit`)
+  `vote` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `votes`
+-- Dumping data for table `votes`
 --
 
 INSERT INTO `votes` (`nom_produit`, `vote`) VALUES
@@ -156,6 +145,44 @@ INSERT INTO `votes` (`nom_produit`, `vote`) VALUES
 ('Twitter', 2),
 ('Typos', 0),
 ('Youtube', 57);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `categories`
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`id_categories`);
+
+--
+-- Indexes for table `produits`
+--
+ALTER TABLE `produits`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `votes`
+--
+ALTER TABLE `votes`
+  ADD PRIMARY KEY (`nom_produit`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `id_categories` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `produits`
+--
+ALTER TABLE `produits`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
