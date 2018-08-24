@@ -28,6 +28,7 @@
                 <div class="header">
                     <div class="info-page">
                         <h1>Fiche technique <?=$donnees['nom_produit']?></h1>
+                        <a href="index.php">Retour</a>
                     </div>
                 </div>
                 <div class="jumbotron">
@@ -51,22 +52,30 @@
 
                      <div class="formulaire">
                         <form action="" method="POST" class="form-com">
-                            <input type="text" name="pseudo" placeholder="Votre pseudo"><br>
-                            <input type="text" name="commentaire" placeholder="Votre commentaire"><br>
+                            <input type="text" name="pseudo" placeholder="Votre Pseudo" required><br>
+                            <input type="text" name="commentaire" placeholder="Votre commentaire" required><br>
                             <button type="submit" name="btn-com" class="btn-send">Envoyer</button>
                         </form>
+                        <?php
+                                $produits = $_GET['id'];
+                            
+                           if (!empty($_POST['pseudo']) AND !empty($_POST['commentaire']))
+                           {
+                                $pseudo = htmlspecialchars($_POST['pseudo']);
+                                $commentaires = htmlspecialchars($_POST['commentaire']);
+
+                                $message = $bdd->query('INSERT INTO messages(id, pseudo, commentaires) VALUES("'.$_GET['id'].'", "'.$pseudo.'","'.$commentaires.'")');
+                           }
+                           else
+                           {
+                               echo "Veuillez renseignez les champs !";
+                           }
+                       
+                        ?>
                     </div>
                 </div>
            
-                    <?php
-              
-                        $pseudo = $_POST['pseudo'];
-                            $commentaires = $_POST['commentaire'];
-                            $produits = $_GET['id'];
-                                            
-                        $message = $bdd->query('INSERT INTO messages(id, pseudo, commentaires) VALUES("'.$_GET['id'].'", "'.$_POST['pseudo'].'","'.$_POST['commentaire'].'")');
-
-                        ?>
+                   
                                                 
                         <?php      
                         $messages = queryOrDie('SELECT * FROM messages LEFT JOIN produits ON produits.id = messages.id WHERE messages.id='.$_GET['id']);
@@ -74,7 +83,7 @@
                         while ($reponse = $messages->fetch())
                         {
                         ?>
-                        <p><?=$reponse['pseudo']?> : <?=$reponse['commentaires']?></p><br>
+                        <span class="pseudo"><?=$reponse['pseudo']?></span><?php echo ":    ";?><?=$reponse['commentaires']?><br>
                         
                         <?php
                         }
